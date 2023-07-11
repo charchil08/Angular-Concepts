@@ -1,0 +1,59 @@
+<div>
+    <div class="ngfor">
+        <section>
+            <div>
+                <h2>ng-for without teplate</h2>
+                <div>
+                    <ul>
+                        <li *ngFor="let passenger of passengers; let i = index">
+                            {{i}} - {{passenger.fullname}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <div class="ngclass">
+        <section>
+            <div>
+                <h2>ng-class without teplate</h2>
+                <div>
+                    <ul>
+                        <li *ngFor="let passenger of passengers; let i = index">
+                            <span class="status" [ngClass]="{
+                            'checked-in': passenger.checkedIn,
+                            'checked-out': !passenger.checkedIn
+                        }">
+                            </span>
+                            {{i}} - {{passenger.fullname}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="Pipes">
+        <section>
+            <div>
+                <h2>Pipes</h2>
+                <div>
+                    <ul>
+                        <li *ngFor="let passenger of passengers; let i = index">
+                            <span class="status" [ngClass]="{
+                            'checked-in': passenger.checkedIn,
+                            'checked-out': !passenger.checkedIn
+                        }">
+                            </span>
+                            {{i}} - {{passenger.fullname}}
+                            <div> {{ passenger | json }} </div>
+                            <p> checked-in date :
+                                {{ passenger.checkedInDate ? (passenger.checkedInDate | date: 'yMMMd' ) : 'Not yet' }}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
