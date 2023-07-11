@@ -4,6 +4,7 @@ interface IPassenger {
   id: number;
   fullname: string;
   checkedIn: boolean;
+  checkedInDate: number | null;
 }
 
 @Component({
@@ -20,32 +21,38 @@ export class NgTemplateDemoComponent {
       {
         id: 1,
         fullname: 'Charchil Kajaliya',
-        checkedIn: true
+        checkedIn: true,
+        checkedInDate: 1490742000000
       },
       {
         id: 2,
         fullname: 'Rahul Kajaliya',
-        checkedIn: false
+        checkedIn: false,
+        checkedInDate: null
       },
       {
         id: 3,
         fullname: 'Raj Kajaliya',
-        checkedIn: true
+        checkedIn: true,
+        checkedInDate: 1490742990000
       },
       {
         id: 4,
         fullname: 'Ravi Kajaliya',
-        checkedIn: false
+        checkedIn: false,
+        checkedInDate: null
       },
       {
         id: 5,
         fullname: 'Rajesh Kajaliya',
-        checkedIn: true
+        checkedIn: true,
+        checkedInDate: 1490742990000
       },
       {
         id: 6,
         fullname: 'Rakesh Kajaliya',
-        checkedIn: false
+        checkedIn: false,
+        checkedInDate: null
       },
     ]
   }
