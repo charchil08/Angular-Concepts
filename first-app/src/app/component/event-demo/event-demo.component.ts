@@ -16,4 +16,5 @@ export class EventDemoComponent {
     console.log(event);
     this.name = "Satish";
   }
+
 }
