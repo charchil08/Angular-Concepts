@@ -5,6 +5,7 @@ import { CommonModule } from "@angular/common";
 import { EventDemoComponent } from './component/event-demo/event-demo.component';
 import { FormsModule } from "@angular/forms";
 import { NgTemplateDemoComponent } from './component/ng-template-demo/ng-template-demo.component';
+import { PassengerDashboardModule } from "./module/passenger-dashboard/passenger-dashboard.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,10 @@ import { NgTemplateDemoComponent } from './component/ng-template-demo/ng-templat
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+
+    //custom modules
+    PassengerDashboardModule
   ],
   bootstrap: [AppComponent]
 })
