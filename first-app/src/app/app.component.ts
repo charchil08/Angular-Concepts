@@ -2,9 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+  <div>
+    <h1>{{ title }}</h1>
+    <h2>App component works!</h2>
+  </div>
+  `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'first-app';
+  title: string;
+
+  constructor() {
+    this.title = 'First App';
+  }
 }
