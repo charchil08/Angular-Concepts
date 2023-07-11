@@ -4,3 +4,10 @@
     <br />
     <p>your name - {{name}}</p>
 </div>
+
+<div>
+    <input type="text" placeholder="populate name using ref" #refName />
+    <button (click)="handleRefClick(refName.value)">Change ref name</button>
+    <br />
+    <p>your ref name - {{refName.value}}</p>
+</div>

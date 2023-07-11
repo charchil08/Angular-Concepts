@@ -7,14 +7,19 @@ import { Component } from '@angular/core';
 })
 export class EventDemoComponent {
   public name: string;
+  public refName: string;
 
   constructor() {
     this.name = 'Angular';
+    this.refName = '';
   }
 
   handleClick(event: any): void {
     console.log(event);
     this.name = "Satish";
   }
-
+  handleRefClick(refNameValue: string): void {
+    console.log(refNameValue);
+    this.refName = refNameValue;
+  }
 }
