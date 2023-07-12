@@ -1,1 +1,8 @@
-<p>passenger-detail works!</p>
+<div>
+    <span class="status" [ngClass]="{
+        'checked-in': detail.checkedIn,
+        'checked-out': !detail.checkedIn
+    }">
+    </span>
+    <span>{{detail.fullname}}</span>
+</div>

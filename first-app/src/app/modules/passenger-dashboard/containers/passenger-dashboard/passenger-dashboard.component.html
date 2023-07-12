@@ -1,40 +1,7 @@
 <div>
-    <app-passenger-count></app-passenger-count>
-    <app-passenger-detail></app-passenger-detail>
-    <div class="ngfor">
-        <section>
-            <div>
-                <h2>ng-for without teplate</h2>
-                <div>
-                    <ul>
-                        <li *ngFor="let passenger of passengers; let i = index">
-                            {{i}} - {{passenger.fullname}}
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <app-passenger-count [items]="passengers"></app-passenger-count>
+    <app-passenger-detail *ngFor="let passenger of passengers" [detail]="passenger"></app-passenger-detail>
 
-        </section>
-    </div>
-    <div class="ngclass">
-        <section>
-            <div>
-                <h2>ng-class without teplate</h2>
-                <div>
-                    <ul>
-                        <li *ngFor="let passenger of passengers; let i = index">
-                            <span class="status" [ngClass]="{
-                            'checked-in': passenger.checkedIn,
-                            'checked-out': !passenger.checkedIn
-                        }">
-                            </span>
-                            {{i}} - {{passenger.fullname}}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
     <div class="Pipes">
         <section>
             <div>
