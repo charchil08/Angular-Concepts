@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChange, SimpleChanges } from '@angular/core';
 import { IPassenger } from '../../models/passenger.interface';
 
 @Component({
@@ -9,7 +9,7 @@ import { IPassenger } from '../../models/passenger.interface';
 
 
 
-export class PassengerDetailComponent {
+export class PassengerDetailComponent implements OnChanges {
   @Input() detail: IPassenger = {} as IPassenger;
 
   @Output() edit: EventEmitter<any> = new EventEmitter();
@@ -17,17 +17,24 @@ export class PassengerDetailComponent {
 
   editing: boolean = false;
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+    if (changes['detail']) {
+      this.detail = { ...changes['detail'].currentValue };
+    }
+  }
+
   handleNameChange(value: string): void {
     this.detail.fullname = value;
-    console.log('handleNameChange');
   }
 
   handleToggleEdit(): void {
     this.editing = !this.editing;
+    !this.editing && this.edit.emit(this.detail);
   }
 
-  handleRemove(event: any): void {
-    console.log('handleRemove');
+  handleRemove(): void {
+    this.remove.emit(this.detail);
   }
 
 }
