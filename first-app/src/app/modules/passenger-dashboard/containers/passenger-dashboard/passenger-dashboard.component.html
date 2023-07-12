@@ -2,28 +2,4 @@
     <app-passenger-count [items]="passengers"></app-passenger-count>
     <app-passenger-detail *ngFor="let passenger of passengers" [detail]="passenger" (edit)="handleEdit($event)"
         (remove)="handleRemove($event)"></app-passenger-detail>
-
-    <div class="Pipes">
-        <section>
-            <div>
-                <h2>Pipes</h2>
-                <div>
-                    <ul>
-                        <li *ngFor="let passenger of passengers; let i = index">
-                            <span class="status" [ngClass]="{
-                            'checked-in': passenger.checkedIn,
-                            'checked-out': !passenger.checkedIn
-                        }">
-                            </span>
-                            {{i}} - {{passenger.fullname}}
-                            <div> {{ passenger | json }} </div>
-                            <p> checked-in date :
-                                {{ passenger.checkedInDate ? (passenger.checkedInDate | date: 'yMMMd' ) : 'Not yet' }}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
 </div>
