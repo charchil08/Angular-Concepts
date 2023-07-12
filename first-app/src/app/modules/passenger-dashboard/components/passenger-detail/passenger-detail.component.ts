@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IPassenger } from '../../models/passenger.interface';
 
 @Component({
@@ -11,4 +11,23 @@ import { IPassenger } from '../../models/passenger.interface';
 
 export class PassengerDetailComponent {
   @Input() detail: IPassenger = {} as IPassenger;
+
+  @Output() edit: EventEmitter<any> = new EventEmitter();
+  @Output() remove: EventEmitter<any> = new EventEmitter();
+
+  editing: boolean = false;
+
+  handleNameChange(value: string): void {
+    this.detail.fullname = value;
+    console.log('handleNameChange');
+  }
+
+  handleToggleEdit(): void {
+    this.editing = !this.editing;
+  }
+
+  handleRemove(event: any): void {
+    console.log('handleRemove');
+  }
+
 }

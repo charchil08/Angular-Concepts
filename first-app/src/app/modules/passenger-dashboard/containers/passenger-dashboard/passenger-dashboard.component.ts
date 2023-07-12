@@ -59,4 +59,12 @@ export class PassengerDashboardComponent implements OnInit {
             },
         ]
     }
+
+    handleEdit(event: any): void {
+        console.log(event);
+    }
+
+    handleRemove(event: any): void {
+        console.log(event);
+    }
 }

@@ -4,5 +4,14 @@
         'checked-out': !detail.checkedIn
     }">
     </span>
-    <span>{{detail.fullname}}</span>
+
+    <div *ngIf="this.editing">
+        <input type="text" [value]="detail.fullname" (input)="handleNameChange(name.value)" #name>
+    </div>
+    <div *ngIf="!this.editing">
+        {{detail.fullname}}
+    </div>
+
+    <button (click)="handleToggleEdit()">{{this.editing ? "Done" : "Edit"}}</button>
+    <button (click)="this.handleRemove($event)">Remove</button>
 </div>
