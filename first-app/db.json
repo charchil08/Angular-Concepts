@@ -20,56 +20,37 @@
     {
       "id": 1,
       "fullname": "Charchil Kajaliya",
-      "checkedIn": true,
+      "checkedIn": false,
       "checkedInDate": 1490742000000,
-      "children": [
-        {
-          "name": "Khushi",
-          "age": 10
-        }
-      ]
+      "baggage": "none"
     },
     {
       "id": 2,
       "fullname": "Rahul Kajaliya",
       "checkedIn": false,
       "checkedInDate": null,
-      "children": [
-        {
-          "name": "Jani",
-          "age": 10
-        }
-      ]
+      "baggage": ""
     },
     {
       "id": 3,
       "fullname": "Jelanshi Kajaliya",
       "checkedIn": true,
       "checkedInDate": 1490742990000,
-      "children": null
+      "baggage": ""
     },
     {
       "id": 4,
       "fullname": "Ravi Kajaliya",
       "checkedIn": false,
       "checkedInDate": null,
-      "children": [
-        {
-          "name": "Raj",
-          "age": 10
-        },
-        {
-          "name": "Ronit",
-          "age": 10
-        }
-      ]
+      "baggage": ""
     },
     {
       "id": 5,
       "fullname": "Rajesh Kajaliya",
       "checkedIn": true,
       "checkedInDate": 1490742990000,
-      "children": null
+      "baggage": ""
     }
   ]
 }

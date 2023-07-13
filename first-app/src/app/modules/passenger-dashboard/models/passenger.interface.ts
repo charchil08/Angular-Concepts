@@ -7,6 +7,6 @@ export interface IPassenger {
     id: number;
     fullname: string;
     checkedIn: boolean;
-    checkedInDate: number | null;
-    children: IChild[] | null;
+    checkedInDate?: number | null;
+    baggage: string;
 }

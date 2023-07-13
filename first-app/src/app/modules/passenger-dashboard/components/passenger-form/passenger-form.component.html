@@ -1,0 +1,74 @@
+<div>
+    <h3>Passenger Form</h3>
+
+    <div *ngIf="detail">
+        {{ detail | json }}
+    </div>
+
+    <form #form="ngForm">
+        <div>
+            Passenger name:
+            <input type="text" name="fullname" [ngModel]="detail.fullname">
+        </div>
+        <br />
+        <div>
+            Id :
+            <input type="number" name="id" [ngModel]="detail.id">
+        </div>
+        <br />
+        <div>
+            <label>
+                Checked in (using radio buttons):
+            </label>
+            <label>
+                <input type="radio" name="checkedIn" [ngModel]="detail.checkedIn" [value]="true"
+                    (ngModelChange)="handleCheckIn($event)"> Yes </label>
+            <label>
+                <input type="radio" name="checkedIn" [ngModel]="detail.checkedIn" [value]="false"
+                    (ngModelChange)="handleCheckIn($event)"> No
+            </label>
+        </div>
+        <br />
+
+        <div>
+            <label>
+                checkedIn (using checkbox):
+            </label>
+            <input type="checkbox" name="checkedIn" [ngModel]="detail.checkedIn"
+                (ngModelChange)="handleCheckIn($event)"> Yes
+        </div>
+        <br />
+
+        <div *ngIf="detail.checkedIn">
+            <label>
+                Check in date :
+            </label>
+            <input type="number" name="checkInDate" [ngModel]="detail.checkedInDate">
+        </div>
+        <br />
+
+        <!-- <div>
+            Luggage:
+            <select name="baggage" [ngModel]="detail.baggage">
+                <option *ngFor="let item of luggage" [value]="item.key" [selected]="item.key === detail.baggage">
+                    {{ item.value }}
+                </option>
+            </select>
+        </div> -->
+
+        <br />
+        <div>
+            Luggage (using ngModelChange):
+            <select name="baggage" [(ngModel)]="detail.baggage">
+                <option *ngFor="let item of luggage" [ngValue]="item.key">
+                    {{ item.value }}
+                </option>
+            </select>
+        </div>
+
+    </form>
+
+    <div>
+        {{ form.value | json }}
+    </div>
+</div>

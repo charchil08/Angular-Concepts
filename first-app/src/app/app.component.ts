@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   <div>
     <h1>{{ title }}</h1>
     <h2>App component works!</h2>
-    <passenger-dashboard></passenger-dashboard>
+    <app-passenger-viewer></app-passenger-viewer>
   </div>
   `,
   styleUrls: ['./app.component.scss']
