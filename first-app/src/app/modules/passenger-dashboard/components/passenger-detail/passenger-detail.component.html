@@ -12,6 +12,11 @@
         {{detail.fullname}}
     </div>
 
+    <div *ngIf="this.viewing">
+        {{detail | json}}
+    </div>
+
+    <button (click)="handleView()">{{this.viewing ? "close" : "view"}}</button>
     <button (click)="handleToggleEdit()">{{this.editing ? "Done" : "Edit"}}</button>
     <button (click)="this.handleRemove()">Remove</button>
 </div>

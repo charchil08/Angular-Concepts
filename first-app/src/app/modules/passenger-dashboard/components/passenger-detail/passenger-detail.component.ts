@@ -14,14 +14,22 @@ export class PassengerDetailComponent implements OnChanges {
 
   @Output() edit: EventEmitter<any> = new EventEmitter();
   @Output() remove: EventEmitter<any> = new EventEmitter();
+  @Output() view: EventEmitter<any> = new EventEmitter();
 
   editing: boolean = false;
+  viewing: boolean = false;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
     if (changes['detail']) {
       this.detail = { ...changes['detail'].currentValue };
     }
+  }
+
+  handleView(): void {
+    debugger;
+    this.viewing = !this.viewing;
+    this.viewing && this.view.emit(this.detail.id);
   }
 
   handleNameChange(value: string): void {

@@ -43,7 +43,7 @@
     },
     {
       "id": 3,
-      "fullname": "Raj Kajaliya",
+      "fullname": "Jelanshi Kajaliya",
       "checkedIn": true,
       "checkedInDate": 1490742990000,
       "children": null
@@ -70,30 +70,6 @@
       "checkedIn": true,
       "checkedInDate": 1490742990000,
       "children": null
-    },
-    {
-      "id": 6,
-      "fullname": "Rakesh Kajaliya",
-      "checkedIn": false,
-      "checkedInDate": null,
-      "children": [
-        {
-          "name": "Raj",
-          "age": 10
-        },
-        {
-          "name": "Ronit",
-          "age": 10
-        },
-        {
-          "name": "Rahul",
-          "age": 10
-        },
-        {
-          "name": "Ravi",
-          "age": 10
-        }
-      ]
     }
   ]
 }

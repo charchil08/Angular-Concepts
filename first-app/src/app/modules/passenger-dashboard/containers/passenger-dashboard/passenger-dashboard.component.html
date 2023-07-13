@@ -1,5 +1,5 @@
 <div>
     <app-passenger-count *ngIf="passengers" [items]="passengers"></app-passenger-count>
-    <app-passenger-detail *ngFor="let passenger of passengers" [detail]="passenger" (edit)="handleEdit($event)"
-        (remove)="handleRemove($event)"></app-passenger-detail>
+    <app-passenger-detail *ngFor="let passenger of passengers" [detail]="passenger" (view)="handleById($event)"
+        (edit)="handleEdit($event)" (remove)="handleRemove($event)"></app-passenger-detail>
 </div>
