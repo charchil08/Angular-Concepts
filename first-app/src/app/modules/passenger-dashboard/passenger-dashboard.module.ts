@@ -9,6 +9,7 @@ import { PassengerDashboardService } from "./services/passenger-dashboard.servic
 import { PassengerViewerComponent } from './containers/passenger-viewer/passenger-viewer.component';
 import { PassengerFormComponent } from './components/passenger-form/passenger-form.component';
 import { HomeComponent } from './components/home/home.component';
+import { PassengerDashboardRoutingModule } from "./passenger-dashboard-routing.module";
 
 @NgModule({
     declarations: [
@@ -22,9 +23,10 @@ import { HomeComponent } from './components/home/home.component';
     imports: [
         CommonModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        PassengerDashboardRoutingModule,
     ],
-    exports: [PassengerViewerComponent],
+    // exports: [PassengerViewerComponent],
     providers: [PassengerDashboardService],
 })
 

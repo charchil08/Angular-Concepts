@@ -5,7 +5,7 @@ import { INav } from './shared/interface/nav.interface';
   selector: 'app-root',
   template: `
     <nav class="nav">
-      <a *ngFor="let item of nav" [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:item.exact}" >{{item.name}}</a>
+      <a *ngFor="let item of Nav" [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:item.exact}" >{{item.name}}</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -20,6 +20,11 @@ export class AppComponent {
       {
         link: '/',
         name: 'Home',
+        exact: true
+      },
+      {
+        link: '/passengers',
+        name: 'Passengers',
         exact: true
       },
       {
