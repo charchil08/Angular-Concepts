@@ -42,13 +42,6 @@
       "id": 4,
       "checkedIn": false,
       "baggage": "hand-only"
-    },
-    {
-      "id": 5,
-      "fullname": "Rajesh Kajaliya",
-      "checkedIn": true,
-      "checkedInDate": 1490742990000,
-      "baggage": ""
     }
   ]
 }

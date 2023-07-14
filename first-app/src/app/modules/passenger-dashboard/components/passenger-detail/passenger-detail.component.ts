@@ -12,12 +12,11 @@ import { IPassenger } from '../../models/passenger.interface';
 export class PassengerDetailComponent implements OnChanges {
   @Input() detail: IPassenger = {} as IPassenger;
 
-  @Output() edit: EventEmitter<any> = new EventEmitter();
-  @Output() remove: EventEmitter<any> = new EventEmitter();
-  @Output() view: EventEmitter<any> = new EventEmitter();
+  @Output() edit: EventEmitter<IPassenger> = new EventEmitter<IPassenger>();
+  @Output() remove: EventEmitter<IPassenger> = new EventEmitter<IPassenger>();
+  @Output() view: EventEmitter<number> = new EventEmitter<number>();
 
   editing: boolean = false;
-  viewing: boolean = false;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
@@ -28,8 +27,7 @@ export class PassengerDetailComponent implements OnChanges {
 
   handleView(): void {
     debugger;
-    this.viewing = !this.viewing;
-    this.viewing && this.view.emit(this.detail.id);
+    this.view.emit(this.detail.id);
   }
 
   handleNameChange(value: string): void {
