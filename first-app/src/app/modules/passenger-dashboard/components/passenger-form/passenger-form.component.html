@@ -47,16 +47,16 @@
         </div>
         <br />
 
-        <!-- <div>
-            Luggage:
+        <div>
+            <abbr title="when you don't know api well"> Luggage (without using ngModelChange):</abbr>
             <select name="baggage" [ngModel]="detail.baggage">
-                <option *ngFor="let item of luggage" [value]="item.key" [selected]="item.key === detail.baggage">
+                <option *ngFor="let item of luggage" [value]="item.key" [selected]="item.key===detail.baggage">
                     {{ item.value }}
                 </option>
             </select>
-        </div> -->
-
+        </div>
         <br />
+
         <div>
             Luggage (using ngModelChange):
             <select name="baggage" [(ngModel)]="detail.baggage">
@@ -67,7 +67,7 @@
         </div>
 
     </form>
-
+    <br />
     <div>
         {{ form.value | json }}
     </div>
