@@ -38,11 +38,10 @@
       "baggage": ""
     },
     {
-      "id": 4,
       "fullname": "Ravi Kajaliya",
+      "id": 4,
       "checkedIn": false,
-      "checkedInDate": null,
-      "baggage": ""
+      "baggage": "hand-only"
     },
     {
       "id": 5,

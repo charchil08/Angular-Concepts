@@ -1,1 +1,4 @@
-<app-passenger-form *ngIf="passenger" [detail]="passenger" (update)="onUpdate($event)"></app-passenger-form>
+<div class="container">
+    <app-passenger-form *ngIf="passenger" [detail]="passenger" (update)="onUpdate($event)"></app-passenger-form>
+    <button class="goBack" (click)="goBack()"> &lsaquo; Go Back</button>
+</div>
