@@ -8,6 +8,7 @@ import { PassengerDetailComponent } from './components/passenger-detail/passenge
 import { PassengerDashboardService } from "./services/passenger-dashboard.service";
 import { PassengerViewerComponent } from './containers/passenger-viewer/passenger-viewer.component';
 import { PassengerFormComponent } from './components/passenger-form/passenger-form.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { PassengerFormComponent } from './components/passenger-form/passenger-fo
         PassengerCountComponent,
         PassengerDetailComponent,
         PassengerViewerComponent,
-        PassengerFormComponent
+        PassengerFormComponent,
+        HomeComponent
     ],
     imports: [
         CommonModule,

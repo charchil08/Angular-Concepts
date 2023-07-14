@@ -3,11 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <div>
-    <h1>{{ title }}</h1>
-    <h2>App component works!</h2>
-    <app-passenger-viewer></app-passenger-viewer>
-  </div>
+    <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss']
 })
