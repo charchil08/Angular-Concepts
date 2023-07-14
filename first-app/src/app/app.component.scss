@@ -1,0 +1,21 @@
+.nav {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #ccc;
+
+    a {
+        color: hsla(256, 73%, 60%, 0.699);
+        text-decoration: none;
+        margin: 8px 12px;
+        padding: 8px 12px;
+        &.active {
+            color: hsla(256, 92%, 47%, 0.877);
+            text-decoration: underline;
+            transition: all 1s ease-in-out;
+        }
+        &:hover {
+            color: hsla(236, 56%, 36%, 0.877);
+            transition: all 1s ease-in-out;
+        }
+    }
+}
