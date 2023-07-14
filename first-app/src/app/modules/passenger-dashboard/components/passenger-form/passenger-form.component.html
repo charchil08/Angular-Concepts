@@ -8,14 +8,20 @@
     <form #form="ngForm">
         <div>
             Passenger name:
-            <input type="text" name="fullname" [ngModel]="detail.fullname">
+            <input type="text" name="fullname" [ngModel]="detail.fullname" required>
+            <div *n>
+
+            </div>
         </div>
-        <br />
+
         <div>
             Id :
-            <input type="number" name="id" [ngModel]="detail.id">
+            <input type="number" name="id" [ngModel]="detail.id" #id="ngModel" required>
+            <div *ngIf="id.errors && id.errors['required'] && id.dirty" class="error">
+                id is required
+            </div>
         </div>
-        <br />
+
         <div>
             <label>
                 Checked in (using radio buttons):
@@ -28,7 +34,7 @@
                     (ngModelChange)="handleCheckIn($event)"> No
             </label>
         </div>
-        <br />
+
 
         <div>
             <label>
@@ -37,7 +43,7 @@
             <input type="checkbox" name="checkedIn" [ngModel]="detail.checkedIn"
                 (ngModelChange)="handleCheckIn($event)"> Yes
         </div>
-        <br />
+
 
         <div *ngIf="detail.checkedIn">
             <label>
@@ -45,7 +51,7 @@
             </label>
             <input type="number" name="checkInDate" [ngModel]="detail.checkedInDate">
         </div>
-        <br />
+
 
         <div>
             <abbr title="when you don't know api well"> Luggage (without using ngModelChange):</abbr>
@@ -55,7 +61,7 @@
                 </option>
             </select>
         </div>
-        <br />
+
 
         <div>
             Luggage (using ngModelChange):
@@ -67,8 +73,16 @@
         </div>
 
     </form>
-    <br />
+
     <div>
         {{ form.value | json }}
+    </div>
+
+    <div>
+        Form valid : {{ form.valid | json }}
+    </div>
+
+    <div>
+        Form invalid : {{ form.invalid | json }}
     </div>
 </div>
