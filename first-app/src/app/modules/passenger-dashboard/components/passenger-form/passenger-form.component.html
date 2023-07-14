@@ -5,7 +5,7 @@
         {{ detail | json }}
     </div>
 
-    <form #form="ngForm">
+    <form #form="ngForm" (submit)="handleSubmit(form.value, form.valid ?? false)" novalidate>
         <div>
             Passenger name:
             <input type="text" name="fullname" [ngModel]="detail.fullname" required>
@@ -70,6 +70,10 @@
                     {{ item.value }}
                 </option>
             </select>
+        </div>
+
+        <div>
+            <button type="submit" [disabled]="form.invalid">Update passenger</button>
         </div>
 
     </form>

@@ -18,10 +18,9 @@
   },
   "passengers": [
     {
+      "fullname": "Steve Jobs",
       "id": 1,
-      "fullname": "Charchil Kajaliya",
       "checkedIn": false,
-      "checkedInDate": 1490742000000,
       "baggage": "none"
     },
     {

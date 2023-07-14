@@ -5,3 +5,20 @@ div {
 .error {
     color: #ec4040;
 }
+
+button {
+    background-color: #2ecc71;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+        background-color: #27ae60;
+    }
+    &[disabled] {
+        background-color: #bdc3c7;
+        cursor: not-allowed;
+    }
+}
