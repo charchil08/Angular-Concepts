@@ -18,17 +18,17 @@
   },
   "passengers": [
     {
-      "fullname": "Steve Jobs",
+      "fullname": "Sunny Vachheta",
       "id": 1,
       "checkedIn": false,
       "baggage": "none"
     },
     {
-      "id": 2,
       "fullname": "Rahul Kajaliya",
-      "checkedIn": false,
-      "checkedInDate": null,
-      "baggage": ""
+      "id": 2,
+      "checkedIn": true,
+      "baggage": "",
+      "checkInDate": 1689336717233
     },
     {
       "id": 3,
